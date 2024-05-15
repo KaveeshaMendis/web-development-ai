@@ -17,10 +17,10 @@ die("Connection failed: " . $conn->connect_error);
 // Escape user inputs for security
 $firstName =$_POST['firstName'];
 $lastName =$_POST['lastName'];
-$email = $conn->$_POST['email'];
-$phone = $conn->$_POST['phone'];
-$salary = $conn->$_POST['salary'];
-$dob = $conn->$_POST['dob'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$salary = $_POST['salary'];
+$dob = $_POST['dob'];
 
 // Insert data into employee table
 $sql = "INSERT INTO employee (firstName, lastName, email, phone, salary, dob) VALUES ('$firstName', '$lastName',
