@@ -1,36 +1,64 @@
 <?php
-// Assuming the form fields are named 'firstName', 'lastName', 'email', 'phone', 'salary', and 'dob' in register.html
-// Make sure to sanitize and validate user inputs to prevent SQL injection
+// Enable error reporting
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Establish a connection to the database
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "test1";
+$dbname = "aiphp";
 
-// Create connection
+
+// Generate a random password
+function generatePassword($length = 8) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $password = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $password .= $characters[$index];
+    }
+
+    return $password;
+}
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " );
 }
 
-// Escape user inputs for security
-$firstName =$_POST['firstName'];
-$lastName =$_POST['lastName'];
+// Retrieve data submitted by the form
 $email = $_POST['email'];
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$gender = $_POST['gender'];
 $phone = $_POST['phone'];
 $salary = $_POST['salary'];
-$dob = $_POST['dob'];
+$dateOfBirth = $_POST['dateOfBirth'];
+$password = generatePassword();
 
-// Insert data into employee table
-$sql = "INSERT INTO employee (firstName, lastName, email, phone, salary, dob) VALUES ('$firstName', '$lastName',
-'$email', '$phone', '$salary', '$dob')";
+// Prepare and execute the SQL query to insert the data into the Employee table
+$sql = "INSERT INTO Employee (email, firstName, lastName, gender, phone, salary, dateOfBirth, password) VALUES ('$email', '$firstName', '$lastName', '$gender', '$phone', '$salary', '$dateOfBirth', '$password')";
 
-if ($conn->query($sql) === TRUE) {
-echo "New record created successfully";
-} else {
-echo "Error: " . $sql . "<br>" . $conn->error;
+try {
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+} catch (mysqli_sql_exception $e) {
+    if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
+        echo "User Already Exists";
+    } else {
+        echo "Error: " . $e->getMessage();
+    }
 }
 
+// Close the database connection
 $conn->close();
+
 ?>
