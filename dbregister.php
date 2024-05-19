@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "aiphp";
+$dbname = "test1";
 
 
 // Generate a random password
