@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "test1";
+$dbname = "test";
 
 
 // Generate a random password
