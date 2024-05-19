@@ -37,7 +37,7 @@ $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $phone = $_POST['phone'];
 $salary = $_POST['salary'];
-$dateOfBirth = $_POST['dob'];
+$dateOfBirth = $_POST['dateOfBirth'];
 $gender = $_POST['gender'];
 $password = generatePassword();
 
