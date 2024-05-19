@@ -35,14 +35,14 @@ if ($conn->connect_error) {
 $email = $_POST['email'];
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
-$gender = $_POST['gender'];
 $phone = $_POST['phone'];
 $salary = $_POST['salary'];
 $dateOfBirth = $_POST['dateOfBirth'];
+$gender = $_POST['gender'];
 $password = generatePassword();
 
 // Prepare and execute the SQL query to insert the data into the Employee table
-$sql = "INSERT INTO employee (email, firstName, lastName, gender, phone, salary, dateOfBirth, password) VALUES ('$email', '$firstName', '$lastName', '$gender', '$phone', '$salary', '$dateOfBirth', '$password')";
+$sql = "INSERT INTO employee (email, firstName, lastName, phone, salary, dateOfBirth, gender, password) VALUES ('$email', '$firstName', '$lastName', '$phone', '$salary', '$dateOfBirth', '$gender', '$password')";
 
 try {
     if ($conn->query($sql) === TRUE) {
