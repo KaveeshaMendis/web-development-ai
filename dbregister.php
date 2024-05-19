@@ -42,7 +42,7 @@ $dateOfBirth = $_POST['dateOfBirth'];
 $password = generatePassword();
 
 // Prepare and execute the SQL query to insert the data into the Employee table
-$sql = "INSERT INTO Employee (email, firstName, lastName, gender, phone, salary, dateOfBirth, password) VALUES ('$email', '$firstName', '$lastName', '$gender', '$phone', '$salary', '$dateOfBirth', '$password')";
+$sql = "INSERT INTO employee (email, firstName, lastName, gender, phone, salary, dateOfBirth, password) VALUES ('$email', '$firstName', '$lastName', '$gender', '$phone', '$salary', '$dateOfBirth', '$password')";
 
 try {
     if ($conn->query($sql) === TRUE) {
