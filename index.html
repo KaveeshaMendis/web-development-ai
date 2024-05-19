@@ -28,7 +28,7 @@
       sizes="16x16"
       href="img/favi/favicon-16x16.png"
     />
-    <link rel="manifest" href="img/fav/site.webmanifest" />
+    <link rel="manifest" href="img/favi/site.webmanifest" />
     <style>
       .hero-text {
         text-align: center;
@@ -37,16 +37,23 @@
         margin-top: 10vh;
         font-weight: 100;
       }
+
+      .carousel-item {
+        text-align: center;
+      }
+
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="img/favi/favicon-32x32.png" alt="logo"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,30 +73,42 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="register.html">Register</a>
+              <a class="nav-link" aria-current="page" href="register.html"
+                >Register</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link" aria-current="page" href="login.html"
+                >Login</a
+              >
             </li>
           </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
 
     <div class="container">
-      <div class="jumbotron text-center py-5">
-        <h1 class="display-1">One Stop Employee Cloud</h1>
-        <p class="lead">
-          Welcome to the one-stop solution for all your employee management
-          needs.
-        </p>
-      </div>
-    <div class="container">
-      <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="hero-text">One Stop. &ensp;Employee Cloud</div>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade mt-5"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
@@ -97,42 +116,65 @@
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/navigator.gif" class="d-block w-100" alt="..." />
+        <div class="carousel-inner" style="border-radius: 50px">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="img/carosel/Employee Onboarding.gif"
+              class="d-block w-100"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Employee Navigator</h5>
+              <h5>Employee Onboarding</h5>
+              <p>
+                Streamline the onboarding process for new employees with our
+                comprehensive solution.
+              </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/training.gif" class="d-block w-100" alt="..." />
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="img/carosel/Time and Attendance.gif"
+              class="d-block w-100"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Training</h5>
-              
+              <h5>Time and Attendance</h5>
+              <p>
+                Efficiently manage employee attendance with our time and
+                attendance system.
+              </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/salary.gif" class="d-block w-100" alt="..." />
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="img/carosel/Leave Management.gif"
+              class="d-block w-100"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
-              <h5>salary inquiries</h5>
+              <h5>Leave Management</h5>
+              <p>
+                Simplify leave management for employees with our user-friendly
+                system.
+              </p>
             </div>
           </div>
         </div>
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -141,7 +183,7 @@
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -149,5 +191,11 @@
         </button>
       </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
