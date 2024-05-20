@@ -46,6 +46,7 @@ $sql = "INSERT INTO employee (email, firstName, lastName, phone, salary, dateOfB
 
 try {
     if ($conn->query($sql) === TRUE) {
+        header('Location: login.php?success=1');
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
