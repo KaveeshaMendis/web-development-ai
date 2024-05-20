@@ -52,7 +52,8 @@ try {
     }
 } catch (mysqli_sql_exception $e) {
     if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
-        echo "User Already Exists";
+        header('Location: register.php?error=1');
+        exit;
     } else {
         echo "Error: " . $e->getMessage();
     }
