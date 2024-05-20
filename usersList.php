@@ -81,8 +81,8 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL query to select the desired columns from the "Employee" table
-                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM Employee";
+                // SQL query to select the desired columns from the "employee" table
+                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM employee";
 
                 // Execute the query
                 $result = $conn->query($sql);
