@@ -82,7 +82,7 @@
                 }
 
                 // SQL query to select the desired columns from the "Employee" table
-                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM employee";
+                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM Employee";
 
                 // Execute the query
                 $result = $conn->query($sql);
