@@ -72,7 +72,7 @@
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-                $dbname = "test";
+                $dbname = "aiphp";
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -82,7 +82,7 @@
                 }
 
                 // SQL query to select the desired columns from the "Employee" table
-                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM Employee";
+                $sql = "SELECT FirstName, LastName, Email, Salary, Phone, DateOfBirth, Password FROM employee";
 
                 // Execute the query
                 $result = $conn->query($sql);
