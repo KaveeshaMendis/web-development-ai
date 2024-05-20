@@ -27,7 +27,7 @@ $dbname = "aiphp";
 
 // Prepare and execute the SQL query to fetch the user details
 $conn = new mysqli($servername, $username, $password, $dbname);
-$stmt = $conn->prepare("SELECT * FROM Employee WHERE email = ?");
+$stmt = $conn->prepare("SELECT * FROM employee WHERE email = ?");
 $stmt->bind_param("s", $uname);
 $stmt->execute();
 $result = $stmt->get_result();
