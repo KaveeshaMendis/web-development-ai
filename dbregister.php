@@ -53,7 +53,7 @@ try {
     }
 } catch (mysqli_sql_exception $e) {
     if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
-        header('Location: login.php?error=1');
+        header('Location: register.php?error=1');
         exit;
     } else {
         echo "Error: " . $e->getMessage();
