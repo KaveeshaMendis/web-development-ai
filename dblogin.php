@@ -17,8 +17,6 @@ if($uname == "admin@gmail.com" && $pass == "admin2024"){
     
 }
 
-//Handling the User Login to Access Dashboard.php
-
 // Establish a connection to the database
 $servername = "localhost";
 $username = "root";
