@@ -27,7 +27,7 @@ $dbname = "aiphp";
 
 // Prepare and execute the SQL query to fetch the user details
 $conn = new mysqli($servername, $username, $password, $dbname);
-$stmt = $conn->prepare("SELECT * FROM employee WHERE email = ?");
+$stmt = $conn->prepare("SELECT * FROM Employee WHERE email = ?");
 $stmt->bind_param("s", $uname);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -38,15 +38,18 @@ if ($result->num_rows === 1) {
     // Verify the password
     if ($user['Password']===$pass) {
         // Redirect to the desired page
+        $_SESSION['userloggedin'] = $uname;
         header("Location: dashboard.php");
         exit();
     } else {
         // Invalid password
-        echo "Invalid password. Please try again.";
+        header("Location: login.php?error");
+        exit();
     }
 } else {
     // Invalid email or user does not exist
-    echo "Invalid email or user does not exist.";
+    header("Location: login.php?error");
+    exit();
 }
 
 // Close the database connection
