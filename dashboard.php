@@ -14,9 +14,9 @@
     <title>One Stop. Employee Cloud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favi/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favi/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
     <link rel="manifest" href="img/fav/site.webmanifest">
     <style>
       .hero-text {
@@ -46,31 +46,29 @@
 </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="img/favi/favicon-32x32.png" alt="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="register.php">Register</a>
-              </li>     
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="logout.php">Logout</a>
-              </li>    
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+            <a class="navbar-brand" href="index.php"><img src="img/fav/favicon-32x32.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                    </li>
+                    
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    
+                    <a href="../logout.php" class="btn btn-outline-danger" >Logout</a>
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
       
       <div class="container-md text-center mt-5" style="max-width: 700px;">
         <div class="mb-4 hero-text">OneStop Dashboard</div>
@@ -81,6 +79,11 @@
             <a class="col-4 dash-card card p-3 rounded-5" style="width: 18rem;" href="notes/index.php">
             <img src="img/dash/notes.png" class="card-img-top" alt="..."/>
             <h3 class="dash-card-text">Notes App</h3>
+            </a>
+            &ensp;
+            <a class="col-4 dash-card card p-3 rounded-5" style="width: 18rem;" href="tasks/index.php">
+            <img src="img/dash/task.png" class="card-img-top" alt="..."/>
+            <h3 class="dash-card-text">Tasks App</h3>
             </a>
             
           
