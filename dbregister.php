@@ -35,26 +35,27 @@ if ($conn->connect_error) {
 $email = $_POST['email'];
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
+$gender = $_POST['gender'];
 $phone = $_POST['phone'];
 $salary = $_POST['salary'];
 $dateOfBirth = $_POST['dateOfBirth'];
-$gender = $_POST['gender'];
 $password = generatePassword();
 
 // Prepare and execute the SQL query to insert the data into the Employee table
-$sql = "INSERT INTO employee (email, firstName, lastName, phone, salary, dateOfBirth, gender, password) VALUES ('$email', '$firstName', '$lastName', '$phone', '$salary', '$dateOfBirth', '$gender', '$password')";
+$sql = "INSERT INTO Employee (email, firstName, lastName, gender, phone, salary, dateOfBirth, password) VALUES ('$email', '$firstName', '$lastName', '$gender', '$phone', '$salary', '$dateOfBirth', '$password')";
 
 try {
     if ($conn->query($sql) === TRUE) {
-        header('Location: login.php?success=1');
-        echo "New record created successfully";
+        header('Location:login.php');
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 } catch (mysqli_sql_exception $e) {
     if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
-        header('Location: register.php?error=1');
-        exit;
+        header('Location:register.php?error');
+        exit();
+
     } else {
         echo "Error: " . $e->getMessage();
     }
