@@ -11,6 +11,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <style>
+        body {
+            background-color: lightblue;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
       .hero-text {
             text-align: center;
             color: #333;
@@ -77,7 +83,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    </div>
+    </div> 
 
    
 

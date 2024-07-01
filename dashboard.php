@@ -64,7 +64,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     
-                    <a href="../logout.php" class="btn btn-outline-danger" >Logout</a>
+                    <a href="logout.php" class="btn btn-outline-danger" >Logout</a>
                 </form>
             </div>
         </div>
