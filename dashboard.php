@@ -70,19 +70,19 @@
         </div>
     </nav>
       
-      <div class="container-md text-center mt-5" style="max-width: 700px;">
-        <div class="mb-4 hero-text">OneStop Dashboard</div>
+      <div class="container-md text-center mt-5" style="max-width: 600px;">
+        <div class="mb-4 hero-text ">OneStop Dashboard</div>
 
         <div class="row">
           
           
             <a class="col-4 dash-card card p-3 rounded-5" style="width: 18rem;" href="notes/index.php">
-            <img src="img/dash/notes.png" class="card-img-top" alt="..."/>
+            <img src="img/dash/notes.gif" class="card-img-top" alt="..."/>
             <h3 class="dash-card-text">Notes App</h3>
             </a>
             &ensp;
             <a class="col-4 dash-card card p-3 rounded-5" style="width: 18rem;" href="tasks/index.php">
-            <img src="img/dash/task.png" class="card-img-top" alt="..."/>
+            <img src="img/dash/task.gif" class="card-img-top" alt="..."/>
             <h3 class="dash-card-text">Tasks App</h3>
             </a>
             
